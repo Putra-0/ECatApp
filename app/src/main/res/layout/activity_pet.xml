@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    tools:context=".activity.">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/idjenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:text="Tambah Hewan "
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:fontFamily="@font/nunito"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tambahhewan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:text="Tambah Hewan "
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:fontFamily="@font/nunito"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/edithewan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
+                    android:text="Edit Hewan "
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:fontFamily="@font/nunito"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/namahewan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:hint="Masukkan Nama Hewan"
+                    android:textColorHint="#89BDE6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tambahhewan"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idNama"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/jktag"
+                    android:text="Jenis Kelamin :"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#89BDE6"
+                    app:layout_constraintTop_toBottomOf="@+id/namahewan"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"/>
+
+                <RadioGroup
+                    android:id="@+id/rb_jk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/round_nametag2"
+                    app:layout_constraintTop_toBottomOf="@+id/jktag"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"
+                    app:layout_constraintEnd_toEndOf="@+id/namahewan">
+
+                    <RadioButton
+                        android:id="@+id/j"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jantan"
+                        android:layout_marginTop="3dp"
+                        android:textColor="?attr/colorSecondary"
+                        android:buttonTint="?attr/colorSecondary"/>
+
+                    <RadioButton
+                        android:id="@+id/b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Betina"
+                        android:textColor="?attr/colorSecondary"
+                        android:buttonTint="?attr/colorSecondary"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/typetag"
+                    android:text="Jenis Hewan (Ras) :"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#89BDE6"
+                    app:layout_constraintTop_toBottomOf="@+id/rb_jk"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"/>
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jenis"
+                    android:visibility="visible"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/namahewan"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"
+                    app:layout_constraintTop_toBottomOf="@+id/typetag"/>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#707070"
+                    android:scrollbarThumbHorizontal="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="@+id/rb_jk"
+                    app:layout_constraintStart_toStartOf="@+id/rb_jk"
+                    app:layout_constraintTop_toBottomOf="@+id/jenis" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/usia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan Usia"
+                    android:textColorHint="#89BDE6"
+                    app:layout_constraintEnd_toEndOf="@+id/jenis"
+                    app:layout_constraintStart_toStartOf="@+id/jenis"
+                    app:layout_constraintTop_toBottomOf="@+id/jenis"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idUmur"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/berat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan Berat Badan (dengan satuannya)"
+                    android:textColorHint="#89BDE6"
+                    app:layout_constraintEnd_toEndOf="@+id/usia"
+                    app:layout_constraintStart_toStartOf="@+id/usia"
+                    app:layout_constraintTop_toBottomOf="@+id/usia"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idBerat"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/rp."
+                    android:text="Rp."
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#89BDE6"
+                    app:layout_constraintTop_toTopOf="@+id/harga"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/harga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan Harga"
+                    android:textColorHint="#89BDE6"
+                    app:layout_constraintEnd_toEndOf="@+id/jenis"
+                    app:layout_constraintStart_toEndOf="@+id/rp."
+                    app:layout_constraintTop_toBottomOf="@+id/berat"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idHarga"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/deskripsi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan Deskripsi"
+                    android:textColorHint="#89BDE6"
+                    app:layout_constraintEnd_toEndOf="@+id/namahewan"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"
+                    app:layout_constraintTop_toBottomOf="@+id/harga"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idDeskripsi"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/svtag"
+                    android:text="Status Vaksinasi :"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#89BDE6"
+                    app:layout_constraintTop_toBottomOf="@+id/deskripsi"
+                    app:layout_constraintStart_toStartOf="@+id/deskripsi"/>
+
+                <RadioGroup
+                    android:id="@+id/rb_vaksin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/round_nametag2"
+                    app:layout_constraintTop_toBottomOf="@+id/svtag"
+                    app:layout_constraintStart_toStartOf="@+id/namahewan"
+                    app:layout_constraintEnd_toEndOf="@+id/namahewan">
+
+                    <RadioButton
+                        android:id="@+id/sudah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sudah"
+                        android:layout_marginTop="3dp"
+                        android:textColor="?attr/colorSecondary"
+                        android:buttonTint="?attr/colorSecondary"/>
+
+                    <RadioButton
+                        android:id="@+id/belum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Belum"
+                        android:textColor="?attr/colorSecondary"
+                        android:buttonTint="?attr/colorSecondary"/>
+
+                </RadioGroup>
+
+                <ImageView
+                    android:id="@+id/kembali"
+                    android:src="@drawable/ic_back"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Button
+                    android:id="@+id/tambah"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="54dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="?attr/colorPrimaryVariant"
+                    android:text="Tambah Data"
+                    android:textAllCaps="false"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/viewPet"
+                    app:layout_constraintStart_toStartOf="@+id/viewPet"
+                    app:layout_constraintTop_toBottomOf="@+id/load" />
+
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="54dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="?attr/colorPrimaryVariant"
+                    android:text="Update Data"
+                    android:textAllCaps="false"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/viewPet"
+                    app:layout_constraintStart_toStartOf="@+id/viewPet"
+                    app:layout_constraintTop_toBottomOf="@+id/load" />
+
+                <Button
+                    android:id="@+id/batal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="@color/merun"
+                    android:layout_marginBottom="30dp"
+                    android:text="Batal"
+                    android:textAllCaps="false"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tambah"
+                    app:layout_constraintStart_toStartOf="@+id/tambah"
+                    app:layout_constraintTop_toBottomOf="@+id/tambah" />
+
+                <Button
+                    android:id="@+id/hapus"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="@color/merun"
+                    android:layout_marginBottom="30dp"
+                    android:text="Hapus"
+                    android:textAllCaps="false"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tambah"
+                    app:layout_constraintStart_toStartOf="@+id/tambah"
+                    app:layout_constraintTop_toBottomOf="@+id/update" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPet"
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/nophoto"
+                    app:layout_constraintEnd_toEndOf="@+id/rb_vaksin"
+                    app:layout_constraintStart_toStartOf="@+id/rb_vaksin"
+                    app:layout_constraintTop_toBottomOf="@+id/rb_vaksin" />
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/indikator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:ci_drawable="@drawable/circleindicator_round"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewPet"
+                    tools:ignore="MissingClass" />
+
+                <Button
+                    android:id="@+id/load"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="?attr/colorPrimaryVariant"
+                    android:text="Pilih Gambar"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="@+id/viewPet"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPet" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

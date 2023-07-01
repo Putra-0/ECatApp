@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    tools:context=".activity.RegisterActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="-4dp"
+                tools:layout_editor_absoluteY="210dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/namalengkap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:hint="Masukkan Nama Lengkap"
+                    android:textColorHint="#89BDE6"
+                    app:startIconDrawable="@drawable/ic_nama"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/e_pet"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/alamat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan Alamat"
+                    android:textColorHint="#89BDE6"
+                    app:startIconDrawable="@drawable/ic_alamat"
+                    app:layout_constraintEnd_toEndOf="@+id/namalengkap"
+                    app:layout_constraintStart_toStartOf="@+id/namalengkap"
+                    app:layout_constraintTop_toBottomOf="@+id/namalengkap"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/notelp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan No.HP"
+                    android:textColorHint="#89BDE6"
+                    app:startIconDrawable="@drawable/ic_nohp"
+                    app:layout_constraintEnd_toEndOf="@+id/alamat"
+                    app:layout_constraintStart_toStartOf="@+id/alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/alamat"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan e-Mail"
+                    android:textColorHint="#89BDE6"
+                    app:startIconDrawable="@drawable/ic_email"
+                    app:layout_constraintEnd_toEndOf="@+id/notelp"
+                    app:layout_constraintStart_toStartOf="@+id/notelp"
+                    app:layout_constraintTop_toBottomOf="@+id/notelp"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Masukkan Password"
+                    android:textColorHint="#89BDE6"
+                    app:startIconDrawable="@drawable/ic_password"
+                    app:layout_constraintEnd_toEndOf="@+id/email"
+                    app:layout_constraintStart_toStartOf="@+id/email"
+                    app:layout_constraintTop_toBottomOf="@+id/email"
+                    app:passwordToggleEnabled="true"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="Konfirmasi Password"
+                    android:textColorHint="#89BDE6"
+                    app:startIconDrawable="@drawable/ic_password"
+                    app:layout_constraintEnd_toEndOf="@+id/password_1"
+                    app:layout_constraintStart_toStartOf="@+id/password_1"
+                    app:layout_constraintTop_toBottomOf="@+id/password_1"
+                    app:passwordToggleEnabled="true"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:textColor="?attr/colorSecondary"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/role_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="2"
+                    android:textSize="5sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@+id/password_2"
+                    app:layout_constraintStart_toStartOf="@+id/password_2"
+                    app:layout_constraintTop_toBottomOf="@+id/password_2" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toBottomOf="@+id/role_id"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_button"
+                    android:text="Daftar"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/colorSecondary"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/role_id"
+                    app:layout_constraintStart_toStartOf="@+id/role_id"
+                    app:layout_constraintTop_toBottomOf="@+id/role_id" />
+
+                <Button
+                    android:id="@+id/btntambah"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_button"
+                    android:text="Tambah"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/colorSecondary"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/role_id"
+                    app:layout_constraintStart_toStartOf="@+id/role_id"
+                    app:layout_constraintTop_toBottomOf="@+id/role_id" />
+
+                <TextView
+                    android:id="@+id/a_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Sudah memiliki akun?"
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn" />
+
+                <TextView
+                    android:id="@+id/daftar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Daftar"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/nunito"
+                    app:layout_constraintEnd_toEndOf="@+id/e_pet"
+                    app:layout_constraintStart_toStartOf="@+id/e_pet"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/kembali"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_back"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/adduser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Tambah Pengguna"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/nunito"
+                    app:layout_constraintEnd_toEndOf="@+id/e_pet"
+                    app:layout_constraintStart_toStartOf="@+id/e_pet"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/e_pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-Pet"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/nunito_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daftar" />
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:text="Masuk"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/roboto_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/a_member" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >

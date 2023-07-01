@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    tools:context=".activity.PetInfoActivity"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Detail"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_back"
+        android:backgroundTint="?attr/colorPrimaryVariant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPet"
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/indikator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:ci_drawable="@drawable/circleindicator_round"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewPet"
+                    tools:ignore="MissingClass" />
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_card"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="15dp"
+                    android:text="Harga"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="@+id/petSpecCard"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPet" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/booked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:background="@drawable/round_card2"
+                    android:backgroundTint="?attr/colorPrimaryVariant"
+                    app:layout_constraintBottom_toBottomOf="@+id/harga"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/harga">
+
+                    <ImageView
+                        android:id="@+id/warnMark"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_warn" />
+
+                    <TextView
+                        android:id="@+id/bookedText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Terpesan"
+                        android:visibility="visible"
+                        android:textColor="#FFBF00"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/warnMark"
+                        app:layout_constraintStart_toEndOf="@+id/warnMark"
+                        app:layout_constraintTop_toTopOf="@+id/warnMark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/notAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:background="@drawable/round_card2"
+                    android:backgroundTint="?attr/colorPrimaryVariant"
+                    app:layout_constraintBottom_toBottomOf="@+id/harga"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/harga">
+
+                    <ImageView
+                        android:id="@+id/crossMark"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_x_icon" />
+
+                    <TextView
+                        android:id="@+id/notAvailableText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="SOLD"
+                        android:visibility="visible"
+                        android:textColor="#E90202"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/crossMark"
+                        app:layout_constraintStart_toEndOf="@+id/crossMark"
+                        app:layout_constraintTop_toTopOf="@+id/crossMark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:background="@drawable/round_card2"
+                    android:backgroundTint="?attr/colorPrimaryVariant"
+                    app:layout_constraintBottom_toBottomOf="@+id/harga"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/harga">
+
+                    <ImageView
+                        android:id="@+id/checkMark"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/path" />
+
+                    <TextView
+                        android:id="@+id/availableText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Tersedia"
+                        android:visibility="visible"
+                        android:textColor="#3CFF00"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/checkMark"
+                        app:layout_constraintTop_toTopOf="@+id/checkMark" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/petSpecCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    app:cardBackgroundColor="?attr/colorOnBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/harga">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/info_card"
+                        android:paddingBottom="10dp">
+
+                        <View
+                            android:id="@+id/divider1"
+                            android:layout_width="0dp"
+                            android:layout_height="0.3dp"
+                            android:layout_marginTop="4dp"
+                            android:background="#707070"
+                            android:scrollbarThumbHorizontal="@color/colorPrimary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/petSpecsText" />
+
+                        <TextView
+                            android:id="@+id/petSpecsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Spesifikasi Hewan"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/divider2"
+                            android:layout_width="0dp"
+                            android:layout_height="0.3dp"
+                            android:layout_marginTop="15dp"
+                            android:background="#707070"
+                            android:scrollbarThumbHorizontal="@color/colorPrimary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/statusVak" />
+
+                        <View
+                            android:id="@+id/divider3"
+                            android:layout_width="0dp"
+                            android:layout_height="0.3dp"
+                            android:layout_marginTop="4dp"
+                            android:background="#707070"
+                            android:scrollbarThumbHorizontal="@color/colorPrimary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/descText" />
+
+                        <TextView
+                            android:id="@+id/descText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Deskripsi Hewan"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+                        <TextView
+                            android:id="@+id/umurText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Umur:"
+                            app:layout_constraintStart_toStartOf="@+id/petSpecsText"
+                            app:layout_constraintTop_toBottomOf="@+id/petSpecsText" />
+
+                        <TextView
+                            android:id="@+id/jenisKelaminText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Jenis Kelamin:"
+                            app:layout_constraintTop_toTopOf="@+id/statusVakText"
+                            app:layout_constraintEnd_toEndOf="@+id/berat"/>
+
+                        <TextView
+                            android:id="@+id/statusVakText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="52dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Status Vaksinasi:"
+                            app:layout_constraintStart_toStartOf="@+id/umurText"
+                            app:layout_constraintTop_toBottomOf="@+id/umurText" />
+
+                        <TextView
+                            android:id="@+id/beratText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Berat:"
+                            app:layout_constraintBottom_toBottomOf="@+id/jenisText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/jenisText" />
+
+                        <TextView
+                            android:id="@+id/jenisText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Jenis:"
+                            app:layout_constraintBottom_toBottomOf="@+id/umurText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/umurText" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Kucing disebut juga kucing domestik atau kucing rumah adalah sejenis mamalia karnivora dari keluarga Felidae. Kata biasanya merujuk kepada yang telah dijinakkan, tetapi bisa juga bisa merujuk kepada seperti singa dan harimau yang juga termasuk jenis kucing."
+                            android:textColor="@color/colorPrimary"
+                            app:layout_constraintStart_toStartOf="@+id/descText"
+                            app:layout_constraintEnd_toEndOf="@id/berat"
+                            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                        <TextView
+                            android:id="@+id/umur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Umur"
+                            android:textColor="@color/colorPrimary"
+                            app:layout_constraintStart_toStartOf="@+id/umurText"
+                            app:layout_constraintTop_toBottomOf="@+id/umurText" />
+
+                        <TextView
+                            android:id="@+id/jeniskelamin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Jenis Kelamin"
+                            android:textColor="@color/colorPrimary"
+                            app:layout_constraintEnd_toEndOf="@+id/jenisKelaminText"
+                            app:layout_constraintTop_toBottomOf="@+id/jenisKelaminText" />
+
+                        <TextView
+                            android:id="@+id/statusVak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Status Vaksinasi"
+                            android:textColor="@color/colorPrimary"
+                            app:layout_constraintStart_toStartOf="@+id/statusVakText"
+                            app:layout_constraintTop_toBottomOf="@+id/statusVakText" />
+
+                        <TextView
+                            android:id="@+id/berat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Berat"
+                            android:textColor="@color/colorPrimary"
+                            app:layout_constraintEnd_toEndOf="@+id/beratText"
+                            app:layout_constraintTop_toBottomOf="@+id/beratText" />
+
+                        <TextView
+                            android:id="@+id/jenis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="Jenis"
+                            android:textColor="@color/colorPrimary"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/jenisText" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/pesan"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="?attr/colorPrimaryVariant"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Pesan Sekarang"
+                    android:visibility="visible"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/petSpecCard"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/petSpecCard"
+                    app:layout_constraintTop_toBottomOf="@+id/petSpecCard" />
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="?attr/colorPrimaryVariant"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Edit Data"
+                    android:visibility="visible"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/petSpecCard"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/petSpecCard"
+                    app:layout_constraintTop_toBottomOf="@+id/petSpecCard" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

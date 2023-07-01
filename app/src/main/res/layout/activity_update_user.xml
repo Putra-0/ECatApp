@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    tools:context=".activity.UpdateUserActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="-4dp"
+                tools:layout_editor_absoluteY="210dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout1"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@id/update"
+                    app:layout_constraintStart_toStartOf="@id/hapus"
+                    app:layout_constraintTop_toBottomOf="@+id/e_pet">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input1"
+                    android:layout_marginTop="64dp"
+                    android:textColorHint="#89BDE6"
+                    android:hint="Nama Lengkap"
+                    app:startIconDrawable="@drawable/ic_nama"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/namalengkap"
+                        android:ems="10"
+                        android:textSize="15sp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="?attr/colorSecondary"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input2"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#89BDE6"
+                    android:hint="Alamat"
+                    app:startIconDrawable="@drawable/ic_alamat"
+                    tools:ignore="MissingConstraints" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/alamat"
+                        android:ems="10"
+                        android:textSize="15sp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="?attr/colorSecondary"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input3"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#89BDE6"
+                    android:hint="No.Hp"
+                    app:startIconDrawable="@drawable/ic_nohp"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/notelp"
+                        android:ems="10"
+                        android:textSize="15sp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="?attr/colorSecondary"
+                        android:inputType="phone"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input4"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#89BDE6"
+                    android:hint="Email"
+                    app:startIconDrawable="@drawable/ic_email"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/email"
+                        android:ems="10"
+                        android:textSize="15sp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="?attr/colorSecondary"
+                        android:inputType="textEmailAddress"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layouttv"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@id/update"
+                    app:layout_constraintStart_toStartOf="@id/hapus"
+                    app:layout_constraintTop_toBottomOf="@+id/e_pet">
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/iv1"
+                        android:background="@drawable/ic_nama"
+                        app:backgroundTint="?attr/colorSecondary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvnamalengkap"
+                        app:layout_constraintBottom_toBottomOf="@id/tvnamalengkap"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:id="@+id/tvnamalengkap"
+                        android:layout_marginTop="64dp"
+                        android:paddingTop="15dp"
+                        android:paddingStart="15dp"
+                        android:text="Nama Lengkap"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:ems="10"
+                        android:background="@drawable/round_card"
+                        android:backgroundTint="?attr/colorOnSecondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv1"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/iv2"
+                        android:background="@drawable/ic_alamat"
+                        app:backgroundTint="?attr/colorSecondary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvalamat"
+                        app:layout_constraintBottom_toBottomOf="@id/tvalamat"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:id="@+id/tvalamat"
+                        android:layout_marginTop="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingStart="15dp"
+                        android:text="Alamat"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:ems="10"
+                        android:background="@drawable/round_card"
+                        android:backgroundTint="?attr/colorOnSecondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvnamalengkap"
+                        app:layout_constraintStart_toEndOf="@id/iv2"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="2dp"
+                        android:id="@+id/iv3"
+                        android:background="@drawable/ic_nohp"
+                        app:backgroundTint="?attr/colorSecondary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvnotelp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvnotelp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:id="@+id/tvnotelp"
+                        android:layout_marginTop="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingStart="15dp"
+                        android:text="No.Telp"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:ems="10"
+                        android:background="@drawable/round_card"
+                        android:backgroundTint="?attr/colorOnSecondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvalamat"
+                        app:layout_constraintStart_toEndOf="@id/iv1"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/iv4"
+                        android:background="@drawable/ic_email"
+                        app:backgroundTint="?attr/colorSecondary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvemail"
+                        app:layout_constraintBottom_toBottomOf="@id/tvemail"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:id="@+id/tvemail"
+                        android:layout_marginTop="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingStart="15dp"
+                        android:text="e-Mail"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:ems="10"
+                        android:background="@drawable/round_card"
+                        android:backgroundTint="?attr/colorOnSecondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvnotelp"
+                        app:layout_constraintStart_toEndOf="@id/iv2"
+                        tools:ignore="MissingConstraints" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout2"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/e_pet"
+                    app:layout_constraintRight_toRightOf="@+id/linearLayout1"
+                    app:layout_constraintLeft_toLeftOf="@+id/linearLayout1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pw1"
+                        android:layout_marginTop="64dp"
+                        android:textColorHint="#89BDE6"
+                        android:hint="Password"
+                        app:startIconDrawable="@drawable/ic_password"
+                        app:passwordToggleEnabled="true"
+                        tools:ignore="MissingConstraints"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/password_1"
+                            android:ems="10"
+                            android:textSize="15sp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:textColor="?attr/colorSecondary"
+                            android:inputType="textPassword"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pw2"
+                        android:layout_marginTop="15dp"
+                        android:textColorHint="#89BDE6"
+                        android:hint="Konfirmasi Password"
+                        app:startIconDrawable="@drawable/ic_password"
+                        tools:ignore="MissingConstraints"
+                        app:passwordToggleEnabled="true"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/password_2"
+                            android:ems="10"
+                            android:textSize="15sp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:textColor="?attr/colorSecondary"
+                            android:inputType="textPassword"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/updateonly"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="@color/colorSecondary"
+                    android:text="Perbarui"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/layouttv"
+                    app:layout_constraintStart_toStartOf="@+id/layouttv"
+                    app:layout_constraintTop_toBottomOf="@+id/layouttv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/teksatas"
+                    android:text="Data tidak sesuai?"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorSecondary"
+                    android:fontFamily="@font/roboto_light"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layouttv"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teksupdate"
+                    android:text="Perbarui Data"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorSecondary"
+                    android:fontFamily="@font/roboto_bold"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/teksatas"/>
+
+                <Button
+                    android:id="@+id/hapus"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="#D30303"
+                    android:text="Hapus"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layouttv"
+                    app:layout_constraintEnd_toStartOf="@+id/update"/>
+
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/buttonSize"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="25dp"
+                    android:background="@drawable/round_button"
+                    app:backgroundTint="@color/colorSecondary"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/roboto_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/hapus"
+                    app:layout_constraintTop_toBottomOf="@+id/layouttv" />
+
+                <TextView
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Edit"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/nunito"
+                    app:layout_constraintEnd_toEndOf="@+id/e_pet"
+                    app:layout_constraintStart_toStartOf="@+id/e_pet"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/e_pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/nunito_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+                <TextView
+                    android:id="@+id/profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profil"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="40sp"
+                    android:visibility="invisible"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/nunito_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+                <TextView
+                    android:id="@+id/pasw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="40sp"
+                    android:visibility="invisible"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/nunito_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+                <ImageView
+                    android:id="@+id/kembali"
+                    android:src="@drawable/ic_back"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:src="@drawable/ic_out"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    tools:ignore="ContentDescription"
+                    android:visibility="invisible"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >
