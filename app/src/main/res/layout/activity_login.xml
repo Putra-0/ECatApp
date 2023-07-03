@@ -61,6 +61,7 @@
         android:layout_marginTop="50dp"
         android:id="@+id/email"
         android:textColorHint="#89BDE6"
+        app:hintTextColor="#89BDE6"
         android:hint="Masukkan e-Mail"
         tools:ignore="MissingConstraints"
         app:startIconDrawable="@drawable/ic_email"
@@ -87,6 +88,7 @@
         app:passwordToggleEnabled="true"
         tools:ignore="MissingConstraints"
         android:textColorHint="#89BDE6"
+        app:hintTextColor="#89BDE6"
         app:startIconDrawable="@drawable/ic_password"
         app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintStart_toStartOf="@+id/email"
@@ -118,19 +120,19 @@
         app:fontFamily="@font/roboto_mono_bold"
         app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
-
-    <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="lupa password?"
-        android:textSize="18sp"
-        android:textColor="?attr/colorSecondary"
-        app:fontFamily="@font/roboto"
-        app:layout_constraintEnd_toEndOf="@+id/password"
         app:layout_constraintTop_toBottomOf="@+id/password" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/forgot_password"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="lupa password?"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="?attr/colorSecondary"-->
+<!--        app:fontFamily="@font/roboto"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/password"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/password" />-->
 
     <TextView
         android:id="@+id/a_member"

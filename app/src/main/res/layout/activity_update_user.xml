@@ -46,6 +46,7 @@
                     android:id="@+id/input1"
                     android:layout_marginTop="64dp"
                     android:textColorHint="#89BDE6"
+                    app:hintTextColor="#89BDE6"
                     android:hint="Nama Lengkap"
                     app:startIconDrawable="@drawable/ic_nama"
                     tools:ignore="MissingConstraints">
@@ -67,6 +68,7 @@
                     android:id="@+id/input2"
                     android:layout_marginTop="15dp"
                     android:textColorHint="#89BDE6"
+                    app:hintTextColor="#89BDE6"
                     android:hint="Alamat"
                     app:startIconDrawable="@drawable/ic_alamat"
                     tools:ignore="MissingConstraints" >
@@ -88,6 +90,7 @@
                     android:id="@+id/input3"
                     android:layout_marginTop="15dp"
                     android:textColorHint="#89BDE6"
+                    app:hintTextColor="#89BDE6"
                     android:hint="No.Hp"
                     app:startIconDrawable="@drawable/ic_nohp"
                     tools:ignore="MissingConstraints">
@@ -110,6 +113,7 @@
                     android:id="@+id/input4"
                     android:layout_marginTop="15dp"
                     android:textColorHint="#89BDE6"
+                    app:hintTextColor="#89BDE6"
                     android:hint="Email"
                     app:startIconDrawable="@drawable/ic_email"
                     tools:ignore="MissingConstraints">
@@ -269,6 +273,7 @@
                         android:id="@+id/pw1"
                         android:layout_marginTop="64dp"
                         android:textColorHint="#89BDE6"
+                        app:hintTextColor="#89BDE6"
                         android:hint="Password"
                         app:startIconDrawable="@drawable/ic_password"
                         app:passwordToggleEnabled="true"
@@ -294,6 +299,7 @@
                         android:id="@+id/pw2"
                         android:layout_marginTop="15dp"
                         android:textColorHint="#89BDE6"
+                        app:hintTextColor="#89BDE6"
                         android:hint="Konfirmasi Password"
                         app:startIconDrawable="@drawable/ic_password"
                         tools:ignore="MissingConstraints"

@@ -80,6 +80,7 @@
                     android:layout_marginRight="32dp"
                     android:hint="Masukkan Nama Jenis"
                     android:textColorHint="#89BDE6"
+                    app:hintTextColor="#89BDE6"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tambahjenis"
